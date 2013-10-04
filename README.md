@@ -1,8 +1,15 @@
 This sample will cover about Strong Paramenter
-##Setup
+##What I did
 ```sh
+$ rails new strong_parameters
+$ cd strong_parameters
 $ rails g scaffold Product name:string description:string category_id:integer
 $ rails g scaffold Category name:string
+```
+##Setup
+```sh
+$ git clone https://github.com/kienbt01359/strong_parameters.git
+$ cd strong_parameters
 $ rake db:create
 $ rake db:migrate
 $ rails s
