@@ -5,7 +5,10 @@ $ rails new strong_parameters
 $ cd strong_parameters
 $ rails g scaffold Product name:string description:string category_id:integer
 $ rails g scaffold Category name:string
+# and wrote some code...
+
 ```
+
 ##Setup
 ```sh
 $ git clone https://github.com/kienbt01359/strong_parameters.git
