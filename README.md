@@ -33,7 +33,8 @@ before_action :set_product, only: [:show, :edit, :create, :update]              
                                                                                                                                                                                                           
  # Never trust parameters from the scary internet, only allow the white list through.                                                                                                                     
  def product_params                                                                                                                                                                                       
-   params.require(:product).permit(:name, :description)       #Permit which column you want to add to dabaabse.                                                                                                                                                     
+   params.require(:product).permit(:name, :description)   #Permit which column you want to add to database, 
+                                                          #value is nil when you not permit some column.                                                                                                                                                      
  end 
 ```
 
@@ -73,7 +74,7 @@ def set_category
   @category = Category.find(params[:id])
 end
 def category_params
-  params.require(:category).permit(:name, products_attributes: [:id,:name])   #Add `id` to use when edit product records
+  params.require(:category).permit(:name, products_attributes: [:id,:name])  #Add `id` to use when edit product records
 end
 ```
 
